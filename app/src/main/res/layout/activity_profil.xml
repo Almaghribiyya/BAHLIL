@@ -7,10 +7,19 @@
     android:padding="24dp">
 
     <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/titleProfil"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/headerLayout"
         android:gravity="center_horizontal">
 
         <ImageView
@@ -45,7 +54,7 @@
             android:id="@+id/editAccountButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Profil"
+            android:text="Ubah Akun &amp; Kata Sandi"
             android:backgroundTint="@color/surface_light"
             android:textColor="@color/text_primary"
             android:gravity="start|center_vertical"

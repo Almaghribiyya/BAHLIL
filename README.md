@@ -4,6 +4,7 @@ Proyek Mata Kuliah Pemrograman Platform
 
 
 | Nama | NIM | Role |
+| ---- | --- | ----|
 | Yusuf Sheva Aimar | 2210511082 | Developer |
 | Dzulfikri Adjmal | 2210511084 | Developer |
 | Muhammad Rezka Al Maghribi | 2210511086 | Project Manager |

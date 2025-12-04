@@ -17,4 +17,5 @@
 
     <!-- Ikon -->
     <color name="icon_blue">#1E88E5</color>
+    <color name="depressing_gray">#616161</color>
 </resources>

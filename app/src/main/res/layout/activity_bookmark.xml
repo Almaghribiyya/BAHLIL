@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookmarkActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerbookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Bookmark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Search Button -->
+    <ImageView
+        android:id="@+id/iv_search_icon_header"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="Cari buku"
+        android:focusable="true"
+        android:padding="4dp"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_constraintBottom_toBottomOf="@id/headerbookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerbookmark"
+        app:tint="@color/text_secondary" />
+    <!-- Tombol bookmark -->
+    <ImageView
+        android:id="@+id/iv_bookmark_icon_header"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="2dp"
+        android:src="@android:drawable/ic_cock2"
+        app:layout_constraintBottom_toBottomOf="@id/iv_search_icon_header"
+        app:layout_constraintEnd_toStartOf="@id/iv_search_icon_header"
+        app:layout_constraintTop_toTopOf="@id/iv_search_icon_header"
+        app:tint="@color/text_secondary"
+        android:contentDescription="Lihat buku favorit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="History"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bookmark_icon_header"
+        app:layout_constraintEnd_toStartOf="@id/iv_bookmark_icon_header"
+        app:layout_constraintTop_toTopOf="@id/iv_bookmark_icon_header"/>
+
+    <!-- Search Bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_bar_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#F0F0F0"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerbookmark">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:iconifiedByDefault="false"
+            app:queryHint="Cari di bookmark"
+            app:searchIcon="@null" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Recycleview buat anu apa namanya daftar bookmark yes yes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bookmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="true"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar_card"
+        tools:listitem="@layout/item_bookmark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
